@@ -22,22 +22,22 @@ fn build_cfasttext() {
     build
         .cpp(true)
         .files([
-            "cfasttext/fasttext/src/args.cc",
-            "cfasttext/fasttext/src/autotune.cc",
-            "cfasttext/fasttext/src/matrix.cc",
-            "cfasttext/fasttext/src/dictionary.cc",
-            "cfasttext/fasttext/src/loss.cc",
-            "cfasttext/fasttext/src/productquantizer.cc",
-            "cfasttext/fasttext/src/densematrix.cc",
-            "cfasttext/fasttext/src/quantmatrix.cc",
-            "cfasttext/fasttext/src/vector.cc",
-            "cfasttext/fasttext/src/model.cc",
-            "cfasttext/fasttext/src/utils.cc",
-            "cfasttext/fasttext/src/meter.cc",
-            "cfasttext/fasttext/src/fasttext.cc",
+            "cfasttext/fasterText/src/args.cc",
+            "cfasttext/fasterText/src/autotune.cc",
+            "cfasttext/fasterText/src/matrix.cc",
+            "cfasttext/fasterText/src/dictionary.cc",
+            "cfasttext/fasterText/src/loss.cc",
+            "cfasttext/fasterText/src/productquantizer.cc",
+            "cfasttext/fasterText/src/densematrix.cc",
+            "cfasttext/fasterText/src/quantmatrix.cc",
+            "cfasttext/fasterText/src/vector.cc",
+            "cfasttext/fasterText/src/model.cc",
+            "cfasttext/fasterText/src/utils.cc",
+            "cfasttext/fasterText/src/meter.cc",
+            "cfasttext/fasterText/src/fasttext.cc",
             "cfasttext/lib/cfasttext.cc",
         ])
-        .includes(["cfasttext/fasttext/src", "cfasttext/include"])
+        .includes(["cfasttext/fasterText/src", "cfasttext/include"])
         .flag("-std=c++11")
         .flag_if_supported("-pthread")
         .flag_if_supported("-funroll-loops")
@@ -46,6 +46,6 @@ fn build_cfasttext() {
 
 fn main() {
     fail_on_empty_directory("cfasttext");
-    fail_on_empty_directory("cfasttext/fasttext");
+    fail_on_empty_directory("cfasttext/fasterText");
     build_cfasttext();
 }
